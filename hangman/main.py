@@ -21,17 +21,21 @@ for letter in chosen_word:
 #created amount of lives and a loop to play until win or loose
 lives = 6
 end_of_game = False    
+
+#loop to keep playing until finding word or losing 6 lives
 while not end_of_game:
     print(display)
     print(f"You have {lives} lives.")
 
     guess = input("Choose a letter:  ").lower()
 
+#changing the "_" into a letter if correct answer
     for position in range(word_length):
         letter = chosen_word[position]
         if letter == guess:
             display[position] = letter
         
+ # - 1 live if answer not correct       
     if guess not in chosen_word:
         lives -= 1
         if lives == 0:
@@ -48,6 +52,7 @@ while not end_of_game:
         print(f"The secret word is {chosen_word}")
         print("You won!")
 
+#adjutes to show the art according lives
     from art import stages
     print(stages[lives])
 
