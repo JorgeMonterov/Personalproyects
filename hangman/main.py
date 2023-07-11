@@ -45,6 +45,7 @@ while not end_of_game:
     if "_" not in display:
         end_of_game = True
         print(display)
+        print(f"The secret word is {chosen_word}")
         print("You won!")
 
     from art import stages
