@@ -1,70 +1,17 @@
 #Step 1 
 import random
 
-
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
-
 end_of_game = False
-word_list = ["aardvark", "baboon", "camel","onepiece", "ujutsukaisen"]
+
+#word_list = ["demonslayer", "clover", "shippuden","onepiece", "jujutsukaisen"]
+
+from words import word_list
 chosen_word = random.choice(word_list)
 lives = 6
 
-print(f'Pssst, the solution is {chosen_word}.')
+from art import logo
+print(logo)
+#print(f'Pssst, the solution is {chosen_word}.')
 
 display = []
 word_length = len(chosen_word)
@@ -98,6 +45,7 @@ while not end_of_game:
         print(display)
         print("You won!")
 
+    from art import stages
     print(stages[lives])
 
 
