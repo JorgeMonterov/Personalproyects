@@ -1,24 +1,26 @@
 #Step 1 
 import random
 
-end_of_game = False
-
-#word_list = ["demonslayer", "clover", "shippuden","onepiece", "jujutsukaisen"]
-
+#imported words from words module 
+#made a random choise on wordlist from words module
+#
 from words import word_list
 chosen_word = random.choice(word_list)
-lives = 6
 
+#imported the logo from art module
 from art import logo
 print(logo)
 #print(f'Pssst, the solution is {chosen_word}.')
 
+#created a list were "_" are being created according letters in chosen word
 display = []
 word_length = len(chosen_word)
 for letter in chosen_word:
     display.append("_")
 
-    
+#created amount of lives and a loop to play until win or loose
+lives = 6
+end_of_game = False    
 while not end_of_game:
     print(display)
     print(f"You have {lives} lives.")
