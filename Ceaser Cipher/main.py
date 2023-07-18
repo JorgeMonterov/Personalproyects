@@ -12,9 +12,9 @@ shift = int(input("Type the shift number:\n"))
 
 
 def caesar(direction1,plain_text,shift_amount):
-    message= ""     
+    message= ""   
+    #checking if theres something else than a letter  
     for char in plain_text: 
-        #checking if theres something else than a letter
         if char in alphabet:
             position = alphabet.index(char)
             if direction1 == 'decode':
@@ -28,4 +28,3 @@ def caesar(direction1,plain_text,shift_amount):
             message += char   
     print(f"The {direction}d messega is: {message}")     
 caesar(direction1=direction, plain_text=text,shift_amount=shift)
-
